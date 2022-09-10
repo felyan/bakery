@@ -3,7 +3,7 @@ import React from 'react';
 import data from "./data"; 
 //import { totalIncome } from "./SalesOfLastWeek";
 
-const ProfitOfLatWeek = () => {
+const ProfitOfLastWeek = () => {
     const salesOLW = data.salesOfLastWeek;
     const recipes = data.recipes;
     const wholesalePrices = data.wholesalePrices;
@@ -58,7 +58,7 @@ const ProfitOfLatWeek = () => {
         }    
     } 
     
-    //console.log(amounts())
+    console.log(amounts())
 
 //*********************************** */
 // Melyik összetevőből mennyi fogyott?
@@ -94,21 +94,21 @@ const ProfitOfLatWeek = () => {
         for (let i = 0; i < l; i++) {
             let amount = wholesalePrices[i].amount;
             
-            if (amount.incudes("kg")) {
+            if (amount.includes("kg")) {
                 let kgPrice = parseInt(amount.substring(0, amount.lastIndexOf(' '))) / wholesalePrices[i].price;
                 let gPrice = kgPrice / 1000;
                 wholesalePrices[i].unitPrice = gPrice;
                 console.log(kgPrice);
                 console.log(gPrice);
                 return gPrice;
-            } else if (amount.incudes("l")) {
+            } else if (amount.includes("l")) {
                 let lPrice = parseInt(amount.substring(0, amount.lastIndexOf(' '))) / wholesalePrices[i].price;
                 let mlPrice = lPrice / 1000;
                 wholesalePrices[i].unitlPrice = mlPrice;
                 console.log(lPrice);
                 console.log(mlPrice);
                 return mlPrice;                        
-            } else if (amount.incudes("pc")) {
+            } else if (amount.includes("pc")) {
                 let pcPrice = (parseInt(amount.substring(0, amount.lastIndexOf(' '))) / wholesalePrices[i].price);
                 wholesalePrices[i].unitcPrice = pcPrice;
                 console.log(pcPrice);
@@ -156,4 +156,4 @@ const ProfitOfLatWeek = () => {
   )
 }
 
-export default ProfitOfLatWeek
+export default ProfitOfLastWeek

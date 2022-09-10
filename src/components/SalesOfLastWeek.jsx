@@ -29,13 +29,7 @@ const totalIncome = formatter.format(sum)
 
   return (
     <div>
-          {/* <ul>
-              {
-                  salesOLW.map((realPrice) => (<li key={salesOLW.name}>{salesOLW.name}: {realPrice}</li>)) 
-              }
-          </ul> */}
-          <p>Sales of last week: {totalIncome}</p>
-      
+      <p>Sales of last week: {totalIncome}</p>      
     </div>
   )
 }

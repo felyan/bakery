@@ -1,10 +1,10 @@
 import "./App.css";
-import DataFetching from "./components/DataFetching";
+import ProfitOfLastWeek from "./components/ProfitOfLastWeek";
 
 function App() {
   return (
     <div className="App">
-      <DataFetching />
+      <ProfitOfLastWeek />
     </div>
   );
 }

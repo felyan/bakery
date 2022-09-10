@@ -18,19 +18,21 @@ const useWholeInventory = () => {
         
         for (let i = 0; i < m; i++) {
             let amount = inventory[i].amount;
-            
-            if (amount.incudes("kg")) {
-                let ingInGramm = parseInt(amount.substring(0, amount.lastIndexOf(' '))) / 1000;
-                inventory[i].amount2 = ingInGramm;
+            if (amount.includes("kg")) {
+                let ingInGramm = parseInt(amount.substring(0, amount.lastIndexOf(' '))) * 1000;
+                inventory[i].amount2 = ingInGramm[i];
+                console.log(ingInGramm)
                 return ingInGramm;
-            } else if (amount.incudes("l")) {
-                let ingInMl = parseInt(amount.substring(0, amount.lastIndexOf(' '))) / 1000;
-                inventory[i].amount2 = ingInMl;
+            } else if (amount.includes("l")) {
+                let ingInMl = parseInt(amount.substring(0, amount.lastIndexOf(' '))) * 1000;
+                inventory[i].amount2 = ingInMl[i];
+                console.log(ingInMl)
                 return ingInMl;    
             }
         }
         return tomb;
     }
+    console.log(alterAmount())
 
 
     // mennyiségek mértékegységek nélkül
@@ -101,7 +103,9 @@ const useWholeInventory = () => {
     
 
   return (
-    <div>useWholeInventory</div>
+      <div>
+          
+    </div>
   )
 }
 
