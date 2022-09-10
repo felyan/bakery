@@ -6,7 +6,6 @@ import data from "./data";
 const ProfitOfLatWeek = () => {
     const salesOLW = data.salesOfLastWeek;
     const recipes = data.recipes;
-    //const ringredients = data.recipes.ingredients;
     const wholesalePrices = data.wholesalePrices;
 
 //console.log(recipes[3].ingredients[2])
@@ -120,6 +119,7 @@ const ProfitOfLatWeek = () => {
         }
     }
 
+
 //*************************** */
 // Az elfogyott összetevők összára
 //*************************** */
@@ -144,16 +144,14 @@ const ProfitOfLatWeek = () => {
 //****************************************************** */
 // Múlt heti profit = múlt heti bevétel - összetevők összára
 //******************************************************* */
+    let totalIncome;
+    const profitOLW = totalIncome - totalCost;
     
-    //const profitOLW = totalIncome - totalCost;
-    
+
     
   return (
-    <div>
-          
-          {/* <p>A múlt heti profit: {profitOLW}</p> */}
-         
-          
+    <div>          
+          <p>A múlt heti profit: {profitOLW}</p> 
     </div>
   )
 }
